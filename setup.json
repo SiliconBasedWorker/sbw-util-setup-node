@@ -1,0 +1,21 @@
+{
+  "des": "this file is a sample",
+  "deps": {
+    "sbw-finger-wol-node": {
+      "user": "SiliconBasedWorker",
+      "repo": "sbw-finger-wol-node",
+      "branch": "main",
+      "file": "sbw-finger-wol.js",
+      "path": "",
+      "deps": ["wol"]
+    },
+    "sbw-finger-ssh-node": {
+      "user": "SiliconBasedWorker",
+      "repo": "sbw-finger-ssh-node",
+      "branch": "main",
+      "file": "sbw-finger-ssh.js",
+      "path": "",
+      "deps": ["node-ssh"]
+    }
+  }
+}
