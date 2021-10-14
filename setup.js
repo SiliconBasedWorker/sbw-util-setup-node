@@ -18,6 +18,15 @@ function downloadFile(url, fileName) {
   });
 }
 
+const { exec } = require("child_process");
+function execute(cmd) {
+  exec(cmd, function (error, stdout, stderr) {
+    if (error) {
+      console.error(error);
+    }
+  });
+}
+
 for (var k in deps) {
   const url = baseUrl
     .replace("#USER#", deps[k].user)
@@ -27,5 +36,10 @@ for (var k in deps) {
     .replace("#FILE#", deps[k].file);
   console.log(k, url);
   downloadFile(url, deps[k].file);
-  // add new logic to install deps for deps
+  var cmd = "npm install ";
+  deps[k].deps.forEach((d) => {
+    cmd += d += " ";
+  });
+  console.log(cmd);
+  execute(cmd);
 }
