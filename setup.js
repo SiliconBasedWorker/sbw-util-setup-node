@@ -1,7 +1,7 @@
 const baseUrl =
   "https://raw.githubusercontent.com/#USER#/#REPO#/#BRANCH#/#PATH##FILE#";
 
-const { deps } = require("./setup.json");
+const { deps } = require("./package.json");
 const fs = require("fs");
 
 const https = require("https");
